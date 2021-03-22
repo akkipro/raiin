@@ -1,0 +1,154 @@
+
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+</head>
+
+<body id="bg">
+<body>
+<form action = "/predict" method="post" >
+  <div class="form-group row">
+    <label for="inputEmail3" class="col-sm-2 col-form-label">MinTemp</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" name="a" value="13.4">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="inputPassword3" class="col-sm-2 col-form-label">MaxTemp </label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" name="b" value="22.9">
+    </div>
+  </div>
+
+   <div class="form-group row">
+    <label for="inputEmail3" class="col-sm-2 col-form-label">Rainfall</label>
+    <div class="col-sm-10">
+       <input type="text" class="form-control" name="c" value="0.6">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="inputPassword3" class="col-sm-2 col-form-label">WindGustSpeed</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" name="d" value="44.0">
+    </div>
+  </div>
+   <div class="form-group row">
+    <label for="inputEmail3" class="col-sm-2 col-form-label">WindSpeed9am</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" name="e" value="20.0">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="inputPassword3" class="col-sm-2 col-form-label">WindSpeed3pm</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" name="f" value="24.0">
+    </div>
+  </div>
+   <div class="form-group row">
+    <label for="inputEmail3" class="col-sm-2 col-form-label">Humidity9am</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" name="g" value="71.0">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="inputPassword3" class="col-sm-2 col-form-label">Humidity3pm</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" name="h" value="22.0">
+    </div>
+  </div>
+   <div class="form-group row">
+    <label for="inputEmail3" class="col-sm-2 col-form-label">Pressure9am</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" name="i" value="1007.7">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="inputPassword3" class="col-sm-2 col-form-label">Pressure3pm</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" name="j" value="1007.1">
+    </div>
+  </div>
+   <div class="form-group row">
+    <label for="inputEmail3" class="col-sm-2 col-form-label">Temp9am</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" name="k" value="16.9">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="inputPassword3" class="col-sm-2 col-form-label">Temp3pm</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" name="l" value="21.8">
+    </div>
+  </div>
+     <div class="form-group row">
+    <label for="inputEmail3" class="col-sm-2 col-form-label">RainToday</label>
+    <div class="col-sm-10">
+     <input type="text" class="form-control" name="m" value="0.0">
+    </div>
+  </div>
+  
+  <div class="form-group row">
+    <div class="col-sm-10">
+      <input type="submit" class="btn btn-primary" value="submit">
+    </div>
+  </div>
+</form>
+
+
+  {{prediction_text}}   {{f}}   {{m}}
+ 
+ 
+ 
+
+ {{prediction}}
+
+ <p> probability of rain today is  {{pred}}
+
+<script type = "text/javascript">
+
+
+var ghj =  {{prediction}};
+                          
+                          var number = ghj.toString();
+
+  if (number == "1") {
+                        document.write('its a rainy day');
+                        var ih = document.getElementById("bg");
+                        ih.style.backgroundImage="url('/static/source.gif')";
+          }
+        else 
+          {
+                        document.write('its a sunny day');
+                        var ih = document.getElementById("bg");
+                        ih.style.backgroundImage="url('/static/sun.jpg')";
+          }
+
+
+ function tion(){
+                          var ghj =  {{prediction}};
+                          alert('ok');
+                          alert( ghj.toString());
+                          var as = ghj.toString();
+          if (as == "1") {
+                        var ih = document.getElementById("jk");
+                        alert('inside');
+                        alert(ghj);
+                        ih.style.backgroundImage="url('/static/th.jpg')";
+          }
+        }
+
+
+    
+</script>
+
+
+</body>
+</html>

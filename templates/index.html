@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style type="text/css">
+
+			body{
+				background-size: cover;
+
+			}
+
+			
+
+			.aa input[type="text"]{
+
+				border-radius: 10px;
+
+			}
+		</style>
+
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+
+
+	</head>
+	<body id="jk" background="/static/17.jpg" class="container-fluid " style="background-color:yellow;width:100%;height:650px;" >
+		<form action = "/predict" method="post" >
+			<div class="aa container p-3 ">
+				<div class="  row col-12 ">
+					<span class="col-12">
+						<center>
+							<h2  style="color:red;">
+								<br><br>
+								<i>
+									<b>Rainfall Prediction System</b>
+								</i>
+							</h2>
+						</center>
+					</span>
+					
+					<span class="col-3  p-3">
+						<p> 	MinTemp: </p>	
+						<input class="pl-4" type="text" name="a" value="13.4">
+					</span>
+					<span class="col-3 p-3">
+						<p> MaxTemp: </p>	
+						<input class="pl-4" type="text" name="b" value="22.9">
+					</span>
+					<span class="col-3  p-3">
+						<p> Rainfall: </p>	
+						<input class="pl-4" type="text" name="c" value="0.6">
+					</span>
+					<span class="col-3  p-3">
+						<p> WindGustSpeed: </p>	
+						<input class="pl-4" type="text" name="d" value="44.0">
+					</span>
+					<span class="col-3 p-3">
+						<p> 	WindSpeed9am: </p>	
+						<input class="pl-4" type="text" name="e" value="20.0">
+					</span>
+					<span class="col-3  p-3">
+						<p> WindSpeed3pm: </p>	
+						<input class="pl-4" type="text" name="f" value="24.0">
+					</span>
+					<span class="col-3 p-3">
+						<p> 	Humidity9am: </p>	
+						<input class="pl-4" type="text" name="g" value="71.0">
+					</span>
+					<span class="col-3  p-3">
+						<p> 	Humidity3pm: </p>	
+						<input class="pl-4" type="text" name="h" value="22.0">
+					</span>
+					<span class="col-3  p-3">
+						<p> Pressure9am: </p>	
+						<input class="pl-4" type="text" name="i" value="1007.7">
+					</span>
+					<span class="col-3  p-3">
+						<p> Pressure3pm: </p>	
+						<input class="pl-4" type="text" name="j" value="1007.1">
+					</span>
+					<span class="col-3  p-3">
+						<p> Temp9am: </p>	
+						<input class="pl-4" type="text" name="k" value="16.9">
+					</span>
+					<span class="col-3  p-3">
+						<p> Temp3pm: </p>	
+						<input class="pl-4" type="text" name="l" value="21.8">
+					</span>
+					<span class="col-4  p-3">
+					</span>
+					<span class="col-4  p-3 mx-auto">
+						<center> 
+							<p style="align:left;"> RainToday: </p>	
+							<input class="pl-4" type="text" name="m" value=" 0.0">
+						</center>
+					</span>
+					<span class="col-4 p-3">
+					</span>
+					
+					<span class="col-12">
+						<center>
+							<input type="submit" class="btn btn-danger" value="Predict" >
+						</center>
+					</span>
+				
+				</div>	
+			</div>
+		</form> 
+		
+	</body>
+</html>

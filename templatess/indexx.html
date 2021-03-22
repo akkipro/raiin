@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- <link href="style.css" rel="stylesheet" type="text/css"> -->
+
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+
+<style>
+body, html {
+  height: 100%;
+  width: 100%
+  margin: 0;
+}
+
+.bg {
+  /* The image used */
+  background-image: url("");
+
+  /* Full height */
+  height: 100%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+</style>
+
+
+
+</head>
+<body id = "bg">
+
+<h2>The name Attribute</h2>
+
+<form action = "/predict" method="post" >
+
+  first value:<br>
+  <input type="text" name="a" value="13.4">
+  <br>
+  second value:<br>
+  <input type="text" name="b" value="22.9">
+  <br><br>
+   third value:<br>
+  <input type="text" name="c" value="0.6">
+  <br>
+  fourth value:<br>
+  <input type="text" name="d" value="44.0">
+  <br><br>
+     fifth value:<br>
+  <input type="text" name="e" value="20.0">
+  <br>
+  sixth value:<br>
+  <input type="text" name="f" value="24.0">
+  <br><br>
+     seventh value:<br>
+  <input type="text" name="g" value="71.0">
+  <br>
+  eighth value:<br>
+  <input type="text" name="h" value="22.0">
+  <br><br>
+     nineth value:<br>
+  <input type="text" name="i" value="1007.7">
+  <br>
+  tenth value:<br>
+  <input type="text" name="j" value="1007.1">
+  <br><br>
+    eleventh value:<br>
+  <input type="text" name="k" value="16.9">
+  <br>
+  twelveth value:<br>
+  <input type="text" name="l" value="21.8">
+  <br><br>
+  thirteen value :<br>
+  <input type="text" name="m" value="0.0">
+
+
+  
+ 
+  <br><br>
+  <input type="submit" class="btn btn-outline-danger" value="Submit" >
+</form> 
+
+
+ <p{{prediction_text}}   {{f}}   {{m}}</p>
+ 
+ 
+ 
+
+ 
+
+ <p> probability of rain today is  {{pred}}
+
+<script type = "text/javascript">
+
+
+var ghj =  {{prediction}};
+                          
+                          var number = ghj.toString();
+
+  if (number == "1") {
+                        document.write('its a rainy day');
+                        var ih = document.getElementById("bg");
+                        ih.style.backgroundImage="url('/static/source.gif')";
+          }
+        else 
+          {
+                        document.write('its a sunny day');
+                        var ih = document.getElementById("bg");
+                        ih.style.backgroundImage="url('/static/sun.jpg')";
+          }
+
+
+ function tion(){
+                          var ghj =  {{prediction}};
+                          alert('ok');
+                          alert( ghj.toString());
+                          var as = ghj.toString();
+          if (as == "1") {
+                        var ih = document.getElementById("jk");
+                        alert('inside');
+                        alert(ghj);
+                        ih.style.backgroundImage="url('/static/th.jpg')";
+          }
+        }
+
+
+    
+</script>
+
+
+</body>
+</html>

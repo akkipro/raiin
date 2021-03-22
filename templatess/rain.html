@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+
+body{
+    background-size: cover;
+    backgroung-attachment: fixed;
+
+}
+
+{
+width: 1150px;
+height: 400px;
+background-color: rgba(0,0,0,0.5);
+margin:0 auto;
+border-radius: 150x;
+
+
+}
+
+.aa input[type="text"]{
+
+border-radius: 10px;
+
+}
+</style>
+
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+
+
+</head>
+<body id="jk" background="/static/17.jpg">
+
+<center><h2  style="color:red;"><br><br><i><b>Rainfall Prediction System</b></i></h2></center>
+
+
+
+<br>
+<br>
+
+<br>
+<br>
+
+<br>
+<br>
+
+<br>
+<br>
+
+<br>
+<br>
+
+<br>
+<br>
+
+<br>
+<br>
+
+<br>
+<br>
+
+
+ <p> chances of rain today is {{prediction_text}} {{prediction}} {{f}}   {{m}}</p>
+
+ <p> probability of rain today is  {{pred}}
+ 
+
+<script type = "text/javascript">
+
+
+var ghj =  {{prediction}};
+var number = ghj.toString();
+
+if (number == "1") {
+
+document.getElementById("jk").style.background = "url('/static/2.mp4')";
+
+
+
+
+
+          }
+else {
+var ih = document.getElementById("jk");
+ih.style.backgroundImage="url('/static/1.gif')";
+
+
+
+   }
+    
+</script>
+
+
+</body>
+</html>
